@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KCHECK Service Tracker</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-body">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <img src="assets/logos/carecheck.png" alt="KCHECK Logo" class="sidebar-logo" id="sidebarLogo" onerror="this.style.display='none'" />
+      <div class="sidebar-title">
+        <span class="sidebar-app-name">KCHECK</span>
+        <span class="sidebar-app-sub">Service Tracker</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-item active" data-view="dashboard">
+        <span class="nav-icon">◈</span>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a href="#" class="nav-item" data-view="services">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Service Requests</span>
+      </a>
+      <a href="#" class="nav-item" data-view="customers">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Customers</span>
+      </a>
+      <a href="#" class="nav-item" data-view="vehicles">
+        <span class="nav-icon">🚗</span>
+        <span class="nav-label">Vehicles</span>
+      </a>
+      <a href="#" class="nav-item" data-view="quotations">
+        <span class="nav-icon">📄</span>
+        <span class="nav-label">Quotations</span>
+      </a>
+      <a href="#" class="nav-item" data-view="repairs">
+        <span class="nav-icon">🔧</span>
+        <span class="nav-label">Repair Tracking</span>
+      </a>
+      <a href="#" class="nav-item" data-view="payments">
+        <span class="nav-icon">💳</span>
+        <span class="nav-label">Payments</span>
+      </a>
+      <a href="#" class="nav-item" data-view="reports">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Reports &amp; Invoices</span>
+      </a>
+      <a href="#" class="nav-item" data-view="whatsapp">
+        <span class="nav-icon">💬</span>
+        <span class="nav-label">WhatsApp</span>
+      </a>
+      <a href="#" class="nav-item" data-view="settings">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div class="user-info">
+          <span class="user-name">COT Admin</span>
+          <span class="user-role">Administrator</span>
+        </div>
+      </div>
+      <div class="demo-badge">DEMO MODE</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-wrapper" id="mainWrapper">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-title" id="topbarTitle">Dashboard</div>
+      <div class="topbar-actions">
+        <a href="portal.html" class="btn btn-outline btn-sm" target="_blank">Customer Portal</a>
+        <div class="demo-indicator">
+          <span class="demo-dot"></span>
+          Stage 1 — Local Demo
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="page-content" id="pageContent">
+      <!-- Injected by JS -->
+      <div class="loading-state" id="initialLoader">
+        <div class="spinner"></div>
+        <p>Loading KCHECK Service Tracker…</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Overlay for mobile sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Modal container -->
+  <div class="modal-backdrop" id="modalBackdrop" style="display:none">
+    <div class="modal" id="modalBox">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <!-- Scripts (order matters — data first) -->
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/customers.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/quotations.js"></script>
+  <script src="js/payments.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
